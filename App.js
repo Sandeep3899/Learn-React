@@ -14,18 +14,19 @@
 */
 //this is core React code, later we will use JSX to write this code
 
-
+import React from "react"; //importing react
+import ReactDOM from "react-dom/client";
 const parent = React.createElement(
   "div",
   { id: "parent" },
   [
     React.createElement("div", { id: "child" }, [
       React.createElement("h1", { id: "heading" }, "Hello, this is my 1st React code"),
-      React.createElement("p", {}, "This is a paragraph inside the child div.")
+      React.createElement("p", {id: "p1"}, "This is a paragraph inside the child div.")
     ]),
     React.createElement("div", { id: "sibling" }, [
       React.createElement("h1", { id: "heading" }, "Hello, this is my 1st React code"),
-      React.createElement("p", {}, "This is a paragraph inside the sibling div.")
+      React.createElement("p", {id: "p2"}, "This is a paragraph inside the sibling div.")
     ])
   ]
 ); //creating a parent div
@@ -36,7 +37,5 @@ const parent = React.createElement(
 //   "Hello, this is my 1st React code"
 // ); //object
 
-const root = ReactDOM.createRoot(document.getElementById("header"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent); //rendering the element to the root
-
-console.log(parent);
