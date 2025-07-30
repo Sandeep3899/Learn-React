@@ -1,41 +1,26 @@
-/*
-
-<div id = 'parent>
-    <div id = 'child'>
-        <h1 id = 'heading'>Hello, this is my 1st React code</h1>
-        <p>This is a paragraph inside the child div.</p> sibling
-    </div>
-    <div id = 'sibling'>
-        <h1 id = 'heading'>Hello, this is my 1st React code</h1>
-        <p>This is a paragraph inside the sibling div.</p>
-    </div>
-</div>
-
-*/
-//this is core React code, later we will use JSX to write this code
-
-import React from "react"; //importing react
+//importing react
 import ReactDOM from "react-dom/client";
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  [
-    React.createElement("div", { id: "child" }, [
-      React.createElement("h1", { id: "heading" }, "Hello, this is my 1st React code"),
-      React.createElement("p", {id: "p1"}, "This is a paragraph inside the child div.")
-    ]),
-    React.createElement("div", { id: "sibling" }, [
-      React.createElement("h1", { id: "heading" }, "Hello, this is my 1st React code"),
-      React.createElement("p", {id: "p2"}, "This is a paragraph inside the sibling div.")
-    ])
-  ]
-); //creating a parent div
+import React from "react";
+import ReactDOM from "react-dom/client";
+//const heading = React.createElement("h1",{id: "heading1"}, "Learn React");//React.createElement -> this creates an object -> when we render this object it will become a html element
+//above is similar to the below JSX code
+//jsx (Tranpiled before it reaches the JS engine)
+//below is react element
+const title = <h1 className="head" tabIndex="5">Learn React using JSX</h1>;//JSX is a syntax extension that looks similar to HTML, but it is actually JavaScript. It allows us to write HTML-like code within JavaScript files.
+const number = 10;
+//React Functional Component is just a normal javaScript Function
+const HeadingComponent = () => (
+    <div>
+    {title} {/*JSX expression - we can use JS expressions inside JSX*/}
+    {number + 5} {/*JSX expression - we can use JS expressions inside JSX*/}
+    
+    <h1 className="heading">Learn React Functional Components</h1>
+    </div>
+);
 
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading" },
-//   "Hello, this is my 1st React code"
-// ); //object
+const root = ReactDOM.createRoot(document.getElementById("root")); //creating a root element
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent); //rendering the element to the root
+
+
+root.render(<HeadingComponent />); //rendering react component
+

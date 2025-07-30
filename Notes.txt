@@ -1,3 +1,9 @@
+To commit changes to github:
+
+- git add .
+- git commit -m "message"
+- git push
+
 Package.json is a configuration of npm, 
 why do we need this to manage dependencies npm will take care of the version of the package
 
@@ -30,7 +36,7 @@ and defining its direct dependencies.
 .gitignore- it contains files that are not required to upload to github like the node_modules
 
 
-- to ignite the App - npx parcel index.html
+- to ignite the App - "npx parcel index.html" or "npx parcel build index.html" for production ode
 - npm to install
 - npx to excute the package
 
@@ -59,3 +65,32 @@ Parcel:(parceljs.org)
 - Different dev and prod bundles
 
 npx parcel build intex.html for production
+
+- go to package.json -> scripts we can create short cut for the commands
+- now instead of "npx parcel index.html" we enter "npm run start" or ("npm start" this is only work for start)
+
+
+- this is more complex right? it is not developer friendly and hard to read
+const heading = React.createElement("h1",{id: "heading1"}, "Learn React");
+- So JSX(Jav Script React) is created, it is not a part of react both are Different
+-We can build React without JSX. to simply React we use JSX
+"const jsxHeading = <h1>Learn React using JSX</h1>;"
+- JSX is not HTML, it looks like HTML/XML but not HTML/XML
+
+"const jsxHeading = <h1>Learn React using JSX</h1>;"
+- is this valid javascript -> NO -> JS engine cannot understand JSX
+- JS enginer understand ES6(ECMAscript)
+- jsx (Tranpiled before it reaches the JS engine) this is done by Parcel -> Babel(convert jsx to react code)
+- attibutes are given as Camel case(camelCase)
+- single line is fine, if you want to write in multiple lines wrap in ();
+
+React Components:
+- Every thing in React is a Component
+- Two types of Components
+1. class based - OLD way no one uses now
+2. functional Component - NEW way of writing codes
+
+- A funstion that returns a piece of JSX code
+- If a function that returns a react element it is functional Component
+- It starts with a Capital letter
+- To render a react component we do "root.render(<HeadingComponenet />)
