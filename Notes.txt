@@ -93,4 +93,14 @@ React Components:
 - A funstion that returns a piece of JSX code
 - If a function that returns a react element it is functional Component
 - It starts with a Capital letter
-- To render a react component we do "root.render(<HeadingComponenet />)
+- To render a react component we do "root.render(<HeadingComponenet />)"
+
+8/1/2025
+Building realworld application:
+
+Step: 1 - Plan things out, then coding is easy 
+
+For dynamic data we use Props
+- Props is a short form of properties - Arguments to our functions
+
+- Conflict drivin UI: Our website is drivin by data/conflits, controlling ui based on data. (website may vary based on location)

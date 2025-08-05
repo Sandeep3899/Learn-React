@@ -1,4 +1,64 @@
-#root {
-    color: rgb(4, 171, 255);
-    
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px black;
+  align-items: center; /* ← This vertically centers the logo */
+  padding: 10px 20px; /* Add top/bottom spacing */
+}
+
+.logo {
+  height: 50%;
+  width: 50%;
+  margin: 5px;
+}
+
+.nav-items {
+  padding: 7px;
+}
+
+.nav-items > ul {
+  font-size: 18px;
+  display: flex;
+  list-style: none;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.res-cointainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.res-card {
+  background-color: rgb(205, 205, 205);
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  border: solid 1px black;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.res-logo {
+  width: 100%;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
