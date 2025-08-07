@@ -103,4 +103,55 @@ Step: 1 - Plan things out, then coding is easy
 For dynamic data we use Props
 - Props is a short form of properties - Arguments to our functions
 
-- Conflict drivin UI: Our website is drivin by data/conflits, controlling ui based on data. (website may vary based on location)
+- Config drivin UI: Our website is drivin by data/config, controlling ui based on data. (website may vary based on location)
+
+- clean the code
+
+- How to loop a function we can use js map function
+
+- not using key(not acceptable) <<<<<< using index <<<<<< using unique key(best practice)
+
+
+Chapter 05: React Hooks
+- structure the app using common industry methods
+
+two types of exports as shown below
+- to import 1st we need to export(
+export default Header;
+import Header from "./components/Header";)
+
+- we can only have 1 default export for a file as shown above, if we need to export multiple things from a same file use
+- name export 
+export const Component
+import {Component} from "path";
+ 
+- Lets build a filter like top rated restaurant
+- we use js filter function
+onClick={() => {
+            // Filter logic here
+            listOfRestaurants = listOfRestaurants.filter(
+              (res) => res.avgRating > "4"
+            );
+            console.log(listOfRestaurants);
+          }}
+
+
+- React is fast beacuse, it can update DOM effieiently, faster DOM manipulation
+#React Hooks
+- Hook is a normal JS function given by react, it comes with super power. written by Facebook developers
+1. useState() - superpowerful State Variables in React. when ever state variable changes, react will rerender the component
+2.useEffect() - 
+these are two most important hooks we use them 99% of times
+
+#HOW reat works in background?
+- Reconciliation Algorithm (React Fiber) - React16 this algo is added
+
+                O res-container
+                |
+        -----------------
+        |               |   =>  UI changes -> 7 to 3 cards
+        O---------------O
+            7 res cards
+
+            Virtual DOM         
+-Diff Algorithm will find the difference between the updated virtual dom and the prev virtual dom and then it updates the original DOM
