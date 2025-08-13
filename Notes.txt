@@ -1,3 +1,5 @@
+- npm start 
+
 To commit changes to github:
 
 - git add .
@@ -138,9 +140,10 @@ onClick={() => {
 
 - React is fast beacuse, it can update DOM effieiently, faster DOM manipulation
 #React Hooks
-- Hook is a normal JS function given by react, it comes with super power. written by Facebook developers
+- Hook is a normal JavaScript function given by react, it comes with super power. written by Facebook developers
 1. useState() - superpowerful State Variables in React. when ever state variable changes, react will rerender the component
-2.useEffect() - 
+2. useEffect() - Render the component as soon as finshed it will call the useEffect function
+              - If you have to do something after rendering the component we have to write the code in useEffect()
 these are two most important hooks we use them 99% of times
 
 #HOW reat works in background?
@@ -155,3 +158,46 @@ these are two most important hooks we use them 99% of times
 
             Virtual DOM         
 -Diff Algorithm will find the difference between the updated virtual dom and the prev virtual dom and then it updates the original DOM
+
+#Let Explore React
+
+- Monolith architcure, we have API, UI, AUth, Database, SMS - we have to deploy the whole project.
+- Now world is moving towards Microservices architcure, we have diff services for diff jobs. 
+  - we have Backend, we have UI, we have Auth, we have database, we have SMS services all these combined call microserviecs.
+  - this is know as serparation of concerns, and single responsibility principle.
+- Monolith everything needs to written in one lang for everything
+- For microserviecs we can use diff langauges for each services
+  - these run on own specific ports eg for ui: 1234
+  - these run on own specific ports eg for backend: 1267 all these connect by call /ui or /backend
+
+# There are 2 Approaches how ui fetch data from backend:
+1.  
+  - Loads -> api call to fetch data -> render
+              this call takes 500 ms
+2.
+  - As soon as page loades -> renedr ui -> Now Api call -> Render ui with data (always use this in React) 
+  - this btr for UX
+- we use useEffect() for this
+
+- fetch() is a super power given by browsers
+- async()
+
+#Lets build useEffect is a normal function which render -> load data -> rerender
+
+- For better user experience we use some loading till the content displays
+  if (listOfRestaurants.length === 0) {
+    return <h2>Loading...</h2>;
+  }
+
+- latest tech using shimmer ui like loading fake cards refresh utube
+- This is much better, this is standard practice in industry now
+# if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
+- this is conditional rendering
+
+#Why do we even have useState()
+- lets understand with an exmple building login/logout button
+
+#Lets build Search function
+- Whenever state variables update, react triggers a Reconciliation cycle(re-render the component)
