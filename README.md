@@ -4,7 +4,6 @@ Components
 Header
 
 - Logo
-- Search
 - Home
 - Location
 - pickup/Delivery
@@ -13,6 +12,7 @@ Header
 
 Body
 
+- Search
 - Restaurant Cointainer
 - Restaurant Card
 - img
