@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react"; // Importing useState hook from React
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom"; // Importing Link for navigation
 
 const Body = () => {
   //Local State Variable - super powerful of React - we use hooks
@@ -75,7 +76,13 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resDATA={restaurant} />
+          <Link
+            key={restaurant.info.id}
+            to={`/restaurant/${restaurant.info.id}`}
+            className="link-style"
+          >
+            <RestaurantCard resDATA={restaurant} />
+          </Link>
         ))}
         {/* 
           The above code maps through the resList array and creates a RestaurantCard for each restaurant.

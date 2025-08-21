@@ -46,6 +46,7 @@
   justify-content: space-between;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 320px;
 }
 
 .res-card:hover {
@@ -90,6 +91,7 @@
   font-size: 13px;
   color: #666;
 }
+
 .res-card .delivery-time span {
   margin-left: 4px;
 }
@@ -274,4 +276,14 @@
 .footer-items > ul > li {
   padding: 10px;
   margin: 10px;
+}
+
+.link-style {
+  color: #111; /* or inherit */
+  text-decoration: none;
+}
+
+.link-style:hover {
+  color: #ff8c00; /* nice hover color */
+  text-decoration: none;
 }
