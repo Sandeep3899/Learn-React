@@ -287,3 +287,22 @@
   color: #ff8c00; /* nice hover color */
   text-decoration: none;
 }
+.user-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+  background-color: #f9f9f9;
+}
+.user-card h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+.user-card h3 {
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+.user-card p {
+  font-size: 14px;
+  margin: 0;
+}

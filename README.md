@@ -320,3 +320,96 @@ errorElement: <Error />,
 
 1. Client Side Routing - Above we did is this, we are not fetching a new page.
 2. Server Side Routing
+
+#till now we learned about functional based components, in class 08 we will learn about class based components which a old way of creating components. we never use them but good/imp to know may be asked in interviews
+
+- it says how react life cycle works.
+- we'll start experimenting on About US page of our project
+  CLass based component Ex:
+  class UserClass extends React.Component {
+  render() {
+  return (
+  <div className="user-card">
+  <h2>User Name: Sandeep Reddy Yeruva</h2>
+  <h3>Age: 30</h3>
+  <p>Email: sandep.yeruva@gmail.com</p>
+  </div>
+  );
+  }
+  }
+
+Function based component Ex:
+const User = () => {
+return (
+
+<div className="user-card">
+<h2>User Name: Sandeep Reddy Yeruva</h2>
+<h3>Age: 30</h3>
+<p>Email: sandep.yeruva@gmail.com</p>
+</div>
+);
+};
+export default User;
+
+# When component is loaded, 1st parent constroctor is called then the parent render is called
+
+# Now child constructor is called then the child render is called
+
+# Now child mounting is completed then componentDIdMount is called
+
+# Once child fisnished successfully now the parent componentDidMount is called
+
+Parent Constructor
+Parent Render
+Child Constructor
+Child Render
+Child Component Did Mount
+Parent Component Did Mount
+
+# ComponentDidMount is used To make API calls, But why we do that
+
+- lets to functional component
+- we make API call using useEffect
+  useEffect(() =>{
+  },[]);
+- Load -> Basic Render -> API Call -> Render this how we need react to work
+- In order to achive above we use below
+- for API call in class based we use componentDidMount
+
+# React have 2 phases:
+
+- Render phase
+- Commit phase
+
+Parent Constructor
+Parent Render
+1stChild Constructor
+1stChild Render
+2ndChild Constructor
+2ndChild Render
+3rdchild Constructor
+3rdChild Render
+1stchild Component Did Mount
+2ndChild Component Did Mount
+3rdChild Component Did Mount
+Parent Component Did Mount
+
+- it will happen in batches, render phase in batches then Mount phase in batches
+
+ReactLifecycle link:
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+This is how the whole lifecycle looks like:
+
+1. Constructor (dummy)
+2. Render (dummy)
+   <html Dummy>
+3. Component Did Mount
+   <API Call>
+   <this.setState> -> State Variable is updated
+
+------------Update (dummy)
+
+          render(API data)
+          <HTML (new API data)>
+          ComponentDid Update
